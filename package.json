@@ -1,0 +1,28 @@
+{
+  "name": "eventually",
+  "version": "1.0.0",
+  "description": "eventually! - a simple yet extensible todo task manager",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently -n api,web -c teal,yellow \"npm run server\" \"npm run client\"",
+    "server": "node --watch server/index.js",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "init-db": "node server/db.js"
+  },
+  "keywords": [
+    "todo",
+    "tasks",
+    "eventually"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
