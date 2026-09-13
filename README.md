@@ -7,7 +7,7 @@ npm install
 npm install --prefix client
 npm run dev
 
-the SQLite db automatically runs when server runs. Then click on the localhost link it shows.
+the SQLite db automatically is created/opened when server runs. Then click on the localhost link it shows.
 
 ## Architecture
 
