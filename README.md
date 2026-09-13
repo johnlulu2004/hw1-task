@@ -7,7 +7,7 @@ npm install
 npm install --prefix client
 npm run dev
 
-the SQLite db automatically is created/opened when server runs. Then click on the localhost link it shows.
+the SQLite db automatically is created/opened when server runs. Then open http://localhost:5173/.
 
 ## Architecture
 
@@ -26,7 +26,7 @@ the SQLite db automatically is created/opened when server runs. Then click on th
                                                    │  data/eventually.db │
                                                    └─────────────────────┘
 ```
-My app follows a client–server architecture. The React frontend is the client: it handles the UI (adding, listing, editing, completing, and deleting tasks) and never talks to the database directly. Instead, it sends HTTP requests to an Express API on the server. The server owns the business logic and persistence: The route handlers validate input, then read from or write to a SQLite database file (`data/eventually.db`). Then, the responses come back as JSON, and the client updates what you see on screen. In development the client runs on port 5173 and the API on port 3001; Vite proxies `/api` calls so the browser can treat them as same-origin.
+My app follows a client–server architecture. The React frontend is the client: it handles the UI (adding, listing, editing, completing, and deleting tasks) and never talks to the database directly. Instead, it sends HTTP requests to an Express API on the server. The server owns the business logic and persistence: The route handlers validate input, then read from or write to a SQLite database file (`data/eventually.db`). Then, the responses come back as JSON, and the client updates what you see on screen. In development the client runs on port 5173 and the API on port 3001. Vite proxies `/api` calls so the browser can treat them as same-origin.
 
 
 

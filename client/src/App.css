@@ -30,7 +30,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--ink);
-  background: var(--paper);
+  background: #fff;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -51,20 +51,7 @@ select {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(ellipse 90% 60% at 15% -10%, rgba(232, 184, 74, 0.35), transparent 55%),
-    radial-gradient(ellipse 70% 50% at 95% 5%, rgba(31, 122, 108, 0.22), transparent 50%),
-    linear-gradient(180deg, #c9dce8 0%, var(--paper) 42%, #e6eef4 100%);
-  animation: sky-shift 18s ease-in-out infinite alternate;
-}
-
-@keyframes sky-shift {
-  from {
-    filter: hue-rotate(0deg) saturate(1);
-  }
-  to {
-    filter: hue-rotate(8deg) saturate(1.08);
-  }
+  background: #fff;
 }
 
 .hero {
@@ -88,10 +75,10 @@ select {
 
 .brand {
   margin: 0 0 2rem;
-  font-family: var(--font-display);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: clamp(3.2rem, 10vw, 5.5rem);
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
   letter-spacing: -0.03em;
   line-height: 0.95;
   color: var(--ink);
